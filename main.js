@@ -16,6 +16,9 @@ firebase.auth().onAuthStateChanged( newuser => {
     if (newuser) {
         // Setter user til den innloggede brukeren
         user = newuser;
+        // Event Listeners
+        // skjema.addEventListener("submit", lagreMelding);
+        // meldinger.on("child_added", visMelding);
     } else {
         document.body.innerHTML = `
             <main class="notloggedin>
@@ -26,10 +29,4 @@ firebase.auth().onAuthStateChanged( newuser => {
     }
 });
 
-
-
-
-// Event Listeners
-// skjema.addEventListener("submit", lagreMelding);
-// meldinger.on("child_added", visMelding);
 
